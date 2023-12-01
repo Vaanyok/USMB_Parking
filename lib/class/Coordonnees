@@ -1,0 +1,39 @@
+class Coordonnees {
+  final String name;
+  final double latitude;
+  final double longitude;
+  final bool isAvailable;
+  final int count;
+  final int NBReussi;
+  final DateTime heure;
+
+  Coordonnees({
+    required this.name,
+    required this.latitude,
+    required this.longitude,
+    required this.isAvailable,
+    required this.count,
+    required this.NBReussi,
+    required this.heure,
+  });
+
+  factory Coordonnees.fromJson(Map<String, dynamic> json) {
+  return Coordonnees(
+    name: json["NAME"] ?? '',
+    latitude: (json["LAT"] as num?)?.toDouble() ?? 0.0,
+    longitude: (json["LONG"] as num?)?.toDouble() ?? 0.0,
+    isAvailable: json["DISPO"] ?? false,
+    count: (json["NB"] as num?)?.toInt() ?? 0,
+    NBReussi: (json["NBReussi"] as num?)?.toInt() ?? 0,
+    heure: DateTime.parse(json["heure"] ?? ""), // Adapt to your JSON structure
+  );
+}
+
+  String get getName => name;
+  double get getLatitude => latitude;
+  double get getLongitude => longitude;
+  bool get getIsAvailable => isAvailable;
+  int get getCount => count;
+  int get getNBReussi => NBReussi;
+  DateTime get getHeure => heure;
+}
