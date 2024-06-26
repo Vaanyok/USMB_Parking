@@ -8,9 +8,9 @@
 
 ### SERVEUR JS
 
-´´´
+```
 ./node serveur.js
-´´´
+```
 
 ### FLUTTER APP
 
@@ -25,10 +25,10 @@ variable -> *addr* (mettre un lien nrgok sans https:// ou localhost:3000)
 
 #### RUN 
 
-´´´
+```
 flutter pub get
 flutter run 
-´´´
+```
 
 
 ### Pour tous les autres documents en ZIP :
